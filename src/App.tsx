@@ -21,8 +21,14 @@ function App() {
   };
 
   const toggle = () => setDropdownOpen((prevState) => !prevState);
-  const toggle1 = () => setDropdownOpen1((prevState) => !prevState);
+  const toggle1 = () => {
+    setDropdownOpen1((prevState) => !prevState);
+  };
   const toggle2 = () => setDropdownOpen2((prevState) => !prevState);
+
+  const handleChange = () => {
+    console.log();
+  };
   return (
     <Container className="root_container">
       <Row>
@@ -59,9 +65,9 @@ function App() {
                 Dropdown
               </DropdownToggle>
               <DropdownMenu>
-                <DropdownItem>Foo Action</DropdownItem>
-                <DropdownItem>Bar Action</DropdownItem>
-                <DropdownItem>Quo Action</DropdownItem>
+                <DropdownItem dropDownValue="USD">India</DropdownItem>
+                <DropdownItem>UK</DropdownItem>
+                <DropdownItem>US</DropdownItem>
               </DropdownMenu>
             </Dropdown>
           </Row>
